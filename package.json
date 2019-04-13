@@ -1,6 +1,6 @@
 {
   "name": "@saeon/saeon-ux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SAEON's frontend react components npm package",
   "main": "./dist/index.js",
   "author": "SAEON",
