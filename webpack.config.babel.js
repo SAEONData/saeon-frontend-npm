@@ -52,10 +52,10 @@ export default () => ({
   },
 
   plugins: [new CleanWebpackPlugin(['dist/*.*'])],
-  // optimization: {
-  //   splitChunks: {
-  //     name: 'vendor',
-  //     minChunks: 2
-  //   }
-  // }
+  optimization: {
+    splitChunks: {
+      name: 'vendor',
+      minChunks: 2
+    }
+  }
 });

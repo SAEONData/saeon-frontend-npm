@@ -16,12 +16,11 @@ class SearchExample extends React.Component {
     }
   }
 
-
   render() {
     return (
       <div className="search-container">
         <Row>
-          <Col md="4">
+          <Col md="12">
             <InputGroup>
               <Input
                 placeholder="Type here..."
@@ -50,7 +49,7 @@ class SearchExample extends React.Component {
           <div>
             <div className="vertical-spacer" />
             <Row>
-              <Col md="4">
+              <Col md="12">
                 <Alert color="info">
                   You searched:
                   <br />
