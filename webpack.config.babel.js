@@ -34,6 +34,10 @@ export default () => ({
       {
         test: /\.(scss)$/,
         loader: 'style-loader!css-loader!sass-loader'
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
       }
     ]
   },
@@ -48,10 +52,10 @@ export default () => ({
   },
 
   plugins: [new CleanWebpackPlugin(['dist/*.*'])],
-  optimization: {
-    splitChunks: {
-      name: 'vendor',
-      minChunks: 2
-    }
-  }
+  // optimization: {
+  //   splitChunks: {
+  //     name: 'vendor',
+  //     minChunks: 2
+  //   }
+  // }
 });
