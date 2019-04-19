@@ -1,0 +1,53 @@
+.header-container {
+  background-color: white;
+  padding: 4px 8px 4px 8px;
+}
+
+.header-row {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-col {
+  margin: 0px;
+  padding: 0px;
+}
+
+.header-image-left {
+  height: 80px;
+}
+
+.header-image-right {
+  height: 80px;
+}
+
+.header-title {
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  margin-top: -5px;
+  margin-bottom: 0px;
+}
+
+.header-beta-tag {
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  padding: 0px 4px 2px 4px;
+  margin-left: 3px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+.header-sub-title {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: -3px;
+  color: grey;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}

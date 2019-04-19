@@ -1,0 +1,48 @@
+.navbar-container {
+  border-top: 1px solid gainsboro;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 15px 10px -15px;
+  background-color: white;
+  padding: 0px 8px 2px 8px;
+}
+
+.sidebar-button {
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 8px 12px 5px 13px;
+  height: 32px;
+  font-size: 16px;
+}
+
+.navbar-button {
+  margin-top: 5px;
+  padding-top: 2px;
+  min-height: 32px;
+  margin-right: 8px;
+}
+
+.navbar-dropdown-link {
+  padding: 0px;
+  margin: -3px -15px;
+}
+
+.navbar-dropdown-divider {
+  padding: 0px;
+}
+
+.navbar-modal-close-button {
+  border: 1px solid grey;
+  width: 80px;
+}
+
+.navbar-user-icon {
+  color: white;
+  margin-right: 7px;
+  padding: 4px 5px 6px 5px;
+  border-radius: 15px;
+  margin-top: -2px;
+}
+
+.navbar-user-name {
+  margin-top: -1px;
+  font-weight: 600;
+}
