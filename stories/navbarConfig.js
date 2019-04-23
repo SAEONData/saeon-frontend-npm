@@ -1,4 +1,4 @@
-import { accentColor } from '../src/layout/Shared'
+import { accentColor } from '../src/layout-components/Shared'
 
 export default {
   auth: true,
