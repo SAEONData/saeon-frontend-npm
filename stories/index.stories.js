@@ -30,13 +30,19 @@ if (navbarConfig && navbarConfig.left) {
   }
 }
 
-//User
-let user = {
-  expired: false,
-  profile: {
-    FirstName: "Test",
-    Surname: "User"
+//Inject user into navbarConfig
+if (navbarConfig) {
+  //User
+  let user = {
+    expired: false,
+    profile: {
+      FirstName: "Test",
+      Surname: "User"
+    }
   }
+
+  //Inject
+  navbarConfig.user = user
 }
 
 //Store//
@@ -49,7 +55,7 @@ let header = <Header config={headerConfig} />
 
 let navbar = (
   <State store={store}>
-    <Navbar config={navbarConfig} user={user} toggleSidebar={() => store.set({ sidebarOpen: true })} />
+    <Navbar config={navbarConfig} toggleSidebar={() => store.set({ sidebarOpen: true })} />
   </State>
 )
 

@@ -162,9 +162,9 @@ class Navbar extends React.Component {
 
       if (user && !user.expired) {
 
-        {/* Username */ }
+        //Username
         authItems.push(
-          <NavItem>
+          <NavItem key="authUsername">
             <NavLink>
               <span className="oi oi-person navbar-user-icon accent-bg"></span>
               <span className="navbar-user-name accent">
@@ -174,6 +174,7 @@ class Navbar extends React.Component {
           </NavItem>
         )
 
+        //Logout
         authItems.push(
           <NavItem key="authLogout">
             <NavLink href="logout">
@@ -183,6 +184,8 @@ class Navbar extends React.Component {
         )
       }
       else {
+
+        //Login
         authItems.push(
           <NavItem key="authLogin">
             <NavLink href="login">
@@ -191,6 +194,7 @@ class Navbar extends React.Component {
           </NavItem>
         )
 
+        //Register
         authItems.push(
           <NavItem key="authRegister">
             <NavLink href="register">
@@ -207,7 +211,7 @@ class Navbar extends React.Component {
   render() {
 
     let { showModal, modalHeader, modalSrc } = this.state
-    let { config, toggleSidebar, user } = this.props
+    let { config, toggleSidebar } = this.props
 
     return (
       <div className="navbar-container">
@@ -232,7 +236,7 @@ class Navbar extends React.Component {
               (config && config.right) &&
               <Nav className="ml-auto" navbar>
                 {this.renderNavs(config.right)}
-                {this.getAuthLinks(config.auth, user)}
+                {this.getAuthLinks(config.auth, config.user)}
               </Nav>
             }
           </Collapse>
