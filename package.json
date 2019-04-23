@@ -1,8 +1,8 @@
 {
   "name": "@saeon/saeon-ux",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "SAEON's frontend react components library",
-  "main": "./dist/main.js",
+  "main": "./dist/index.js",
   "author": "SAEON",
   "scripts": {
     "build": "webpack --config webpack.config.babel.js",
