@@ -6,6 +6,12 @@ import Navbar from './layout-components/navbar/Navbar'
 import Footer from './layout-components/footer/Footer'
 import Sidebar from './layout-components/sidebar/Sidebar'
 
+//FontAwesome//
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faStroopwafel, faAngleRight, faAngleLeft, faUser, faLink, faUnlink } from '@fortawesome/free-solid-svg-icons'
+library.add(faStroopwafel, faAngleRight, faAngleLeft, faUser, faLink, faUnlink)
+//FontAwesome//
+
 export {
   SearchExample,
   Layout,

@@ -32,12 +32,14 @@ class Footer extends Component {
 
     for (let i = 0; i < 4; i++) {
       let section = data.sections[i]
-      sections.push(
-        <Col key={`section_${i + 1}`} md="3">
-          <p className="footer-section-header">{section.text}</p>
-          {this.renderLinks(section)}
-        </Col>
-      )
+      if (section) {
+        sections.push(
+          <Col key={`section_${i + 1}`} md="3">
+            <p className="footer-section-header">{section.text}</p>
+            {this.renderLinks(section)}
+          </Col>
+        )
+      }
     }
 
     return sections
@@ -76,12 +78,12 @@ class Footer extends Component {
             style={{
               width: link.width,
               cursor: link.link ? "pointer" : "default"
-            }} 
+            }}
             onClick={() => {
               if (link.link) {
                 this.toggleModal(true, link.linkText, link.link)
               }
-            }}/>
+            }} />
         )
       }
     }
@@ -96,9 +98,12 @@ class Footer extends Component {
 
     return (
       <div>
-        <Row className="footer-row-top">
-          {this.renderSections(config)}
-        </Row>
+        {
+          (config.sections && config.sections.length > 0) &&
+          <Row className="footer-row-top">
+            {this.renderSections(config)}
+          </Row>
+        }
 
         <Row className="footer-row-bottom accent-bg">
           <Col md="12">

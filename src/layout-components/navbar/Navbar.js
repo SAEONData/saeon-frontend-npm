@@ -15,9 +15,11 @@ import {
   Modal, ModalHeader, ModalBody, ModalFooter
 } from 'reactstrap';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import '../Shared.scss'
 import './Navbar.scss'
-import 'open-iconic/font/css/open-iconic-bootstrap.scss'
+// import 'open-iconic/font/css/open-iconic-bootstrap.scss'
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -166,7 +168,7 @@ class Navbar extends React.Component {
         authItems.push(
           <NavItem key="authUsername">
             <NavLink>
-              <span className="oi oi-person navbar-user-icon accent-bg"></span>
+              <FontAwesomeIcon icon="user" size="lg" className="navbar-user-icon accent" />
               <span className="navbar-user-name accent">
                 {user.profile.FirstName} {user.profile.Surname}
               </span>
@@ -216,13 +218,10 @@ class Navbar extends React.Component {
     return (
       <div className="navbar-container">
         <RSNavbar color="white" light expand="md" style={{ padding: 0 }}>
-          <NavbarBrand>
-            <span
-              className="oi oi-chevron-right sidebar-button accent-bg"
-              title="Toggle side-bar"
-              aria-hidden="true"
-              onClick={toggleSidebar ? () => toggleSidebar() : null}
-            />
+          <NavbarBrand title="Toggle side-bar" aria-hidden="true" >
+            <div className="sidebar-button accent-bg" onClick={toggleSidebar ? () => toggleSidebar() : null}>
+              <FontAwesomeIcon size="lg" icon="angle-right" />
+            </div>
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
