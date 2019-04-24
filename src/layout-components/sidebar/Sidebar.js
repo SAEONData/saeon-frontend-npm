@@ -6,7 +6,7 @@ import { Drawer, Collapse } from 'antd'
 
 import '../Shared.scss'
 import './Sidebar.scss'
-import 'open-iconic/font/css/open-iconic-bootstrap.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Panel = Collapse.Panel
 
@@ -52,44 +52,46 @@ class Sidebar extends React.Component {
   renderLinks(data, level = 0) {
     let links = []
 
-    data.forEach(x => {
+    if (data) {
+      data.forEach(x => {
 
-      if (typeof x.children !== 'undefined') {
-        links.push(
-          <Panel
-            key={"cat_" + x.id}
-            style={{ border: 0 }}
-            header={
-              <div className="nav-cat-head sidebar-panel-header">
-                {x.text}
-              </div>
-            }
-          >
-            {this.renderLinks(x.children, level + 1)}
-          </Panel>
-        )
-      }
-      else {
-        if (x.link) {
+        if (typeof x.children !== 'undefined') {
           links.push(
-            <div key={"lnk_" + x.id} className="sidebar-link">
-              <a onClick={() => { this.showContent(x.link, x.text, x.window) }}>
-                <span className="oi oi-link-intact sidebar-link-icon"></span>
-                {x.text}
-              </a>
-            </div>
+            <Panel
+              key={"cat_" + x.id}
+              style={{ border: 0 }}
+              header={
+                <div className="nav-cat-head sidebar-panel-header">
+                  {x.text}
+                </div>
+              }
+            >
+              {this.renderLinks(x.children, level + 1)}
+            </Panel>
           )
         }
         else {
-          links.push(
-            <div key={"lnk_" + x.id} className="sidebar-unlink">
-              <span className="oi oi-link-broken sidebar-link-icon"></span>
-              {x.text}
-            </div>
-          )
+          if (x.link) {
+            links.push(
+              <div key={"lnk_" + x.id} className="sidebar-link">
+                <a onClick={() => { this.showContent(x.link, x.text, x.window) }}>
+                  <FontAwesomeIcon icon="link" className="sidebar-link-icon" />
+                  {x.text}
+                </a>
+              </div>
+            )
+          }
+          else {
+            links.push(
+              <div key={"lnk_" + x.id} className="sidebar-unlink">
+                <FontAwesomeIcon icon="unlink" className="sidebar-link-icon" />
+                {x.text}
+              </div>
+            )
+          }
         }
-      }
-    })
+      })
+    }
 
     return links
   }
@@ -119,32 +121,44 @@ class Sidebar extends React.Component {
       <>
         <Drawer
           placement="left"
-          closable={true}
+          closable={false}
           onClose={() => toggleSidebar(false)}
           visible={isOpen}
           width={sideNavWidth}
           bodyStyle={{ paddingLeft: 0, paddingRight: 0, overflowX: 'hidden' }}
         >
-          <Row>
-            <Col>
-              {/* Header image */}
-              <div className="sidebar-header">
-                {config.logoTop &&
-                  <img src={config.logoTop.src} style={{ width: config.logoTop.width }} />
-                }
-              </div>
-            </Col>
-          </Row>
-          <hr />
-          <Row>
-            <Col>
-              {/* Header text */}
-              <h4 className="sidebar-header">
-                {config.title}
-              </h4>
-            </Col>
-          </Row>
-          <hr />
+          {
+            config.logoTop &&
+            <span>
+              <Row>
+                <Col>
+                  {/* Header image */}
+                  <div className="sidebar-header">
+                    {config.logoTop &&
+                      <img src={config.logoTop.src} style={{ width: config.logoTop.width }} />
+                    }
+                  </div>
+                </Col>
+              </Row>
+              <hr />
+            </span>
+          }
+
+          {
+            config.title &&
+            <span>
+              <Row>
+                <Col>
+                  {/* Header text */}
+                  <h4 className="sidebar-header">
+                    {config.title}
+                  </h4>
+                </Col>
+              </Row>
+              <hr />
+            </span>
+          }
+
           <Row>
             <Col>
               {/* Links */}
@@ -153,21 +167,28 @@ class Sidebar extends React.Component {
               </Collapse>
             </Col>
           </Row>
-          <hr />
-          <Row>
-            <Col>
-              {/* Footer image */}
-              <div className="text-center">
-                {config.logoBottom &&
-                  <img src={config.logoBottom.src} style={{ width: config.logoBottom.width }} />
-                }
-              </div>
-            </Col>
-          </Row>
+
+          {
+            config.logoBottom &&
+            <span>
+              <hr />
+              <Row>
+                <Col>
+                  {/* Footer image */}
+                  <div className="text-center">
+                    {config.logoBottom &&
+                      <img src={config.logoBottom.src} style={{ width: config.logoBottom.width }} />
+                    }
+                  </div>
+                </Col>
+              </Row>
+            </span>
+          }
+
           <Drawer
             title={
               <a style={{ fontSize: 18, fontWeight: 500 }} onClick={() => this.closeModal()}>
-                <span className="oi oi-chevron-left sidebar-link-icon"></span>
+                <FontAwesomeIcon icon="angle-left" size="lg" className="sidebar-link-icon" />
                 <span>{contentTitle}</span>
               </a>
             }
@@ -196,7 +217,7 @@ class Sidebar extends React.Component {
                 onClick={() => toggleSidebar(false)}
                 color=""
               >
-                <span className="oi oi-chevron-left" title="Toggle side-bar" aria-hidden="true"></span>
+                <FontAwesomeIcon icon="angle-left" size="lg" />
               </Button>
             </div>
           }

@@ -14,16 +14,24 @@ package-lock.json
 yarn.lock
 
 # project files
+.storybook
+config
+images
+stories
 src
 test
 examples
 CHANGELOG.md
+jest.config.js
+package.json
+webpack.config.babel.js
 .travis.yml
 .editorconfig
 .eslintignore
 .eslintrc
 .babelrc
 .gitignore
+.gitattributes
 
 
 # lock files
