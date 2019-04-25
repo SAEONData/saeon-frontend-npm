@@ -34,7 +34,7 @@ class Footer extends Component {
       let section = data.sections[i]
       if (section) {
         sections.push(
-          <Col key={`section_${i + 1}`} md="3">
+          <Col key={`section_${i + 1}`}>
             <p className="footer-section-header">{section.text}</p>
             {this.renderLinks(section)}
           </Col>
@@ -48,43 +48,45 @@ class Footer extends Component {
   renderLinks(section) {
     let links = []
 
-    for (let i = 0; i < section.links.length; i++) {
+    if (section.links) {
+      for (let i = 0; i < section.links.length; i++) {
 
-      let link = section.links[i]
-      if (link.text) {
-        links.push(
-          <div
-            key={`link_${i + 1}`}
-            style={{
-              cursor: link.link ? "pointer" : "default",
-              fontWeight: link.link ? "400" : "regular",
-              textDecoration: link.link ? "underline" : "",
-              marginBottom: 5
-            }}
-            onClick={() => {
-              if (link.link) {
-                this.toggleModal(true, link.text, link.link)
-              }
-            }}>
-            {link.text}
-          </div>
-        )
-      }
-      else if (link.src) {
-        links.push(
-          <img
-            key={`link_${i + 1}`}
-            src={link.src}
-            style={{
-              width: link.width,
-              cursor: link.link ? "pointer" : "default"
-            }}
-            onClick={() => {
-              if (link.link) {
-                this.toggleModal(true, link.linkText, link.link)
-              }
-            }} />
-        )
+        let link = section.links[i]
+        if (link.text) {
+          links.push(
+            <div
+              key={`link_${i + 1}`}
+              style={{
+                cursor: link.link ? "pointer" : "default",
+                fontWeight: link.link ? "400" : "regular",
+                textDecoration: link.link ? "underline" : "",
+                marginBottom: 5
+              }}
+              onClick={() => {
+                if (link.link) {
+                  this.toggleModal(true, link.text, link.link)
+                }
+              }}>
+              {link.text}
+            </div>
+          )
+        }
+        else if (link.src) {
+          links.push(
+            <img
+              key={`link_${i + 1}`}
+              src={link.src}
+              style={{
+                width: link.width,
+                cursor: link.link ? "pointer" : "default"
+              }}
+              onClick={() => {
+                if (link.link) {
+                  this.toggleModal(true, link.linkText, link.link)
+                }
+              }} />
+          )
+        }
       }
     }
 
@@ -99,7 +101,7 @@ class Footer extends Component {
     return (
       <div>
         {
-          (config.sections && config.sections.length > 0) &&
+          (config && config.sections && config.sections.length > 0) &&
           <Row className="footer-row-top">
             {this.renderSections(config)}
           </Row>

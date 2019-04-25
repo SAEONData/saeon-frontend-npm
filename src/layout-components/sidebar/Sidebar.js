@@ -55,10 +55,12 @@ class Sidebar extends React.Component {
     if (data) {
       data.forEach(x => {
 
+        let key = data.indexOf(x) + 1
+
         if (typeof x.children !== 'undefined') {
           links.push(
             <Panel
-              key={"cat_" + x.id}
+              key={"cat_" + key}
               style={{ border: 0 }}
               header={
                 <div className="nav-cat-head sidebar-panel-header">
@@ -73,7 +75,7 @@ class Sidebar extends React.Component {
         else {
           if (x.link) {
             links.push(
-              <div key={"lnk_" + x.id} className="sidebar-link">
+              <div key={"lnk_" + key} className="sidebar-link">
                 <a onClick={() => { this.showContent(x.link, x.text, x.window) }}>
                   <FontAwesomeIcon icon="link" className="sidebar-link-icon" />
                   {x.text}
@@ -83,7 +85,7 @@ class Sidebar extends React.Component {
           }
           else {
             links.push(
-              <div key={"lnk_" + x.id} className="sidebar-unlink">
+              <div key={"lnk_" + key} className="sidebar-unlink">
                 <FontAwesomeIcon icon="unlink" className="sidebar-link-icon" />
                 {x.text}
               </div>
@@ -101,9 +103,12 @@ class Sidebar extends React.Component {
   }
 
   showContent(link, title, window) {
-    if (window === 'blank') {
+    if (window === 'external') {
       var win = open(link, '_blank');
       win.focus();
+    }
+    else if(window === "internal"){
+      location.hash = link
     }
     else {
       this.setState({ showContent: true, contentLink: link, contentTitle: title })
@@ -201,7 +206,6 @@ class Sidebar extends React.Component {
           >
             <iframe
               className="sidebar-content"
-              id="sidenav-content"
               src={contentLink}
             />
             <Button color="" size="sm" className="sidebar-frame-closebtn accent-bg" onClick={() => this.closeModal()}>

@@ -1,21 +1,19 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { State, Store } from "@sambego/storybook-state";
-import { Row, Col, Jumbotron, Button } from 'reactstrap'
+import { Button, Jumbotron } from 'reactstrap'
 import { notification } from 'antd';
 import {
-  SearchExample,
   Layout,
   Header,
   Navbar,
   Footer,
   Sidebar
 } from '../src/index'
-import './styles.scss'
-import headerConfig from './headerConfig'
-import navbarConfig from './navbarConfig'
-import footerConfig from './footerConfig'
-import sidebarConfig from './sidebarConfig'
+import headerConfig from './config/headerConfig'
+import navbarConfig from './config/navbarConfig'
+import footerConfig from './config/footerConfig'
+import sidebarConfig from './config/sidebarConfig'
 
 //Inject button callback into 'navbarConfig'
 if (navbarConfig && navbarConfig.left) {
@@ -59,6 +57,14 @@ let navbar = (
   </State>
 )
 
+let cfgNavbarConfig = _.clone(navbarConfig, true)
+delete cfgNavbarConfig.sidebarToggle
+let navbarNoSidebar = (
+  <State store={store}>
+    <Navbar config={cfgNavbarConfig} toggleSidebar={() => {}} />
+  </State>
+)
+
 let footer = <Footer config={footerConfig} />
 
 let sidebar = (button) => {
@@ -87,34 +93,41 @@ let sidebar = (button) => {
   )
 }
 
+let layoutContent = (
+  <Jumbotron style={{ backgroundColor: "white", border: "1px solid gainsboro", margin: 0 }}>
+    <h1 className="display-3">Hello, world!</h1>
+  </Jumbotron>
+)
+
 //Stories//
-storiesOf("Layout Components", module)
-  .add("Header", () => header)
-  .add("Navbar", () => navbar)
-  .add("Sidebar", () => sidebar(true))
-  .add("Footer", () => footer)
-  .add("Layout", () =>
+storiesOf("Layout", module)
+  .add("Header", () =>
+    <Layout header={header}>
+      {layoutContent}
+    </Layout>
+  )
+  .add("Navbar", () =>
+    <Layout navbar={navbarNoSidebar} >
+      {layoutContent}
+    </Layout>
+  )
+  .add("Navbar and sidebar", () =>
+    <Layout navbar={navbar} sidebar={sidebar()} >
+      {layoutContent}
+    </Layout>
+  )
+  .add("Footer", () =>
+    <Layout footer={footer} >
+      {layoutContent}
+    </Layout>
+  )
+  .add("All features", () =>
     <Layout
       header={header}
       navbar={navbar}
       footer={footer}
       sidebar={sidebar()}
     >
-      {/* <Jumbotron style={{ backgroundColor: "white", border: "1px solid gainsboro" }}>
-        <h1 className="display-3">Hello, world!</h1>
-        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr className="my-2" />
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      </Jumbotron> */}
-      <h1>Hello World!!</h1>
+      {layoutContent}
     </Layout>
-  )
-
-storiesOf("Examples", module)
-  .add("Search Example", () =>
-    <Row>
-      <Col md={{ size: 6, offset: 3 }} style={{ marginTop: "35vh" }}>
-        <SearchExample />
-      </Col>
-    </Row>
   )

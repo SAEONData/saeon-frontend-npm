@@ -1,4 +1,4 @@
-import placeholder_grey from '../images/placeholder-grey.png'
+import placeholder_grey from '../../images/placeholder-grey.png'
 
 export default {
   title: "SAEON Frontend NPM",

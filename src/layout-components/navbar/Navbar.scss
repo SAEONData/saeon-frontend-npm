@@ -15,7 +15,7 @@
 }
 
 .navbar-button {
-  margin-top: 5px;
+  margin-top: 4px;
   padding-top: 2px;
   min-height: 32px;
   margin-right: 8px;
@@ -37,9 +37,14 @@
 
 .navbar-user-icon {
   margin-right: 7px;
+  margin-left: 25px;
 }
 
 .navbar-user-name {
   margin-top: -1px;
   font-weight: 600;
+}
+
+.nabvar-login-link {
+  margin-left: 25px;
 }

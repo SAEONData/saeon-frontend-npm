@@ -1,8 +1,4 @@
 import React from 'react';
-import { Row, Col } from 'reactstrap';
-import Header from './header/Header'
-import Navbar from './navbar/Navbar'
-
 import './Layout.scss'
 
 class Layout extends React.Component {
@@ -29,16 +25,15 @@ class Layout extends React.Component {
           sidebar
         }
 
-        <Row className="layout-row">
-          <Col className="layout-col">
-            {this.props.children}
-          </Col>
-        </Row>
+        <div className="layout-children-container">
+          {this.props.children}
+        </div>
 
         {
           footer &&
           footer
         }
+
       </div>
     )
   }

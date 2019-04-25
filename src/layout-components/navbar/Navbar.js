@@ -190,7 +190,7 @@ class Navbar extends React.Component {
         //Login
         authItems.push(
           <NavItem key="authLogin">
-            <NavLink href="login">
+            <NavLink href="login" className="nabvar-login-link">
               Login
             </NavLink>
           </NavItem>
@@ -218,11 +218,16 @@ class Navbar extends React.Component {
     return (
       <div className="navbar-container">
         <RSNavbar color="white" light expand="md" style={{ padding: 0 }}>
-          <NavbarBrand title="Toggle side-bar" aria-hidden="true" >
-            <div className="sidebar-button accent-bg" onClick={toggleSidebar ? () => toggleSidebar() : null}>
-              <FontAwesomeIcon size="lg" icon="angle-right" />
-            </div>
-          </NavbarBrand>
+
+          {
+            config.sidebarToggle &&
+            <NavbarBrand title="Toggle side-bar" aria-hidden="true" >
+              <div className="sidebar-button accent-bg" onClick={toggleSidebar ? () => toggleSidebar() : null}>
+                <FontAwesomeIcon size="lg" icon="angle-right" />
+              </div>
+            </NavbarBrand>
+          }
+
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             {
@@ -232,7 +237,7 @@ class Navbar extends React.Component {
               </Nav>
             }
             {
-              (config && config.right) &&
+              (config && (config.right || config.auth)) &&
               <Nav className="ml-auto" navbar>
                 {this.renderNavs(config.right)}
                 {this.getAuthLinks(config.auth, config.user)}

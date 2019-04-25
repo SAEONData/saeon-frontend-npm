@@ -1,7 +1,8 @@
-import { accentColor } from '../src/layout-components/Shared'
+import { accentColor } from '../../src/layout-components/Shared'
 
 export default {
   auth: true,
+  sidebarToggle: true,
   left: [
     {
       id: "btnDoSomething",

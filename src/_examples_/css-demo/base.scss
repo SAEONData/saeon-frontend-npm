@@ -1,0 +1,10 @@
+$accent-color: coral;
+
+// :root {
+//   --accent-color: coral;
+// }
+
+.demo-accent-color {
+  // color: var(--accent-color);
+  color: $accent-color;
+}

@@ -1,0 +1,12 @@
+$accent-color: blue;
+
+// :root {
+//   --accent-color: blue;
+// }
+
+.demo-accent-color-alt {
+  // color: var(--accent-color);
+  color: $accent-color;
+}
+
+@import "./base.scss";
