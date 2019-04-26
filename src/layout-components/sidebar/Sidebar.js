@@ -4,7 +4,7 @@ import React from 'react'
 import { Row, Col, Button } from 'reactstrap'
 import { Drawer, Collapse } from 'antd'
 
-import '../Shared.scss'
+import '../../Shared.scss'
 import './Sidebar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

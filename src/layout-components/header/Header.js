@@ -3,7 +3,7 @@ import { Row, Col } from 'reactstrap';
 
 import placeholder_grey from '../../../images/placeholder-grey.png'
 
-import '../Shared.scss'
+import '../../Shared.scss'
 import './Header.scss'
 
 class Header extends React.Component {

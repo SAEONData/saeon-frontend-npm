@@ -17,7 +17,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import '../Shared.scss'
+import '../../Shared.scss'
 import './Navbar.scss'
 // import 'open-iconic/font/css/open-iconic-bootstrap.scss'
 

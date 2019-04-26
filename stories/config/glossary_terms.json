@@ -1,0 +1,142 @@
+[
+  {
+    "term": "ADMINISTRATOR",
+    "def": "Administrators are assigned by the RADAR customer. They set up and manage workspaces in RADAR, assign curators or subcurators for workspaces, define quota and view statistics. One or more administrators can be assigned to each contract. RADAR communicates important information (releases, maintenance downtimes or unplanned system failures, etc.) to administrators by e-mail."
+  },
+  {
+    "term": "API",
+    "def": "RADAR provides an API, i.e. a programming interface. Using the API, RADAR services can be integrated into existing applications at your institution. For example, RADAR can be offered via an institution's own user interface. The RADAR API is REST-based. The documentation of the API is available here. The system can be offered in parallel via the API and the regular RADAR user interface."
+  },
+  {
+    "term": "BITSTREAM PRESERVATION",
+    "def": "Digital data consists of a fixed sequence of bits that are stored on data carriers. This sequence is called a bitstream. Since the lifetime and reliability of storage media is limited, individual bits may no longer be read correctly after longer time periods. This leads to loss of information. Bitstream preservation uses technical measures such as checksums and redundancy to ensure that the Bitstream remains unchanged over time and after changes in technology. It is a basic prerequisite for digital long-term preservation."
+  },
+  {
+    "term": "CONTROLLED VOCABULARY",
+    "def": "A controlled vocabulary is a collection of terms intended to facilitate the uniform description of objects. Controlled vocabularies enable the interoperability of metadata and thus promote the search for and finding of relevant objects. For example, the RADAR Metadata Schema uses controlled vocabularies to assign one or more subject(s) or the language to a dataset. When selecting the controlled vocabularies, recognized standards were used, e.g. ISO standards for the language and country of origin of the research data."
+  },
+  {
+    "term": "CREATIVE COMMONS LICENSES",
+    "def": "Data providers are offered various licensing models for defining rights of use for research data. Licenses are standard contracts that allow certain actions (e.g. reading, copying, redistributing, modifying, combining with other data) for a licensed object. RADAR recommends the use of liberal and widespread licenses, as they facilitate reuse of research data. RADAR recommends Creative Commons licenses due to their wide distribution. They are also suitable for research data. For more information on licensing of research data, please refer to our overview."
+  },
+  {
+    "term": "CURATOR",
+    "def": "A curator is a data provider with full rights. Curators can transfer research data to RADAR, add metadata and archive or publish datasets. They are assigned by the administrator and are responsible for the research data of the respective workspace. One or more curators can be assigned to a workspace. A curator can assign subcurators and grant selected registered users access to archived datasets."
+  },
+  {
+    "term": "DATA ARCHIVING",
+    "def": "RADAR offers data archiving for retention periods between 5 and 15 years. This fulfills the requirements of good scientific practice and many funding agencies to retain data for a longer period after a project is completed. Each archived dataset is assigned an identifier in the form of a RADAR-ID. RADAR uses bitstream preservation to ensure that the data remains unchanged for the retention period. In contrast to data publication, archived data sets and respective metadata can only be viewed and accessed by administrators and curators or subcurators of the workspace. Optionally, access can also be granted to selected registered users or to all RADAR users."
+  },
+  {
+    "term": "DATA MANAGEMENT PLAN",
+    "def": "A data management plan (DMP) is used to document all decisions and processes relating to the handling of research data in a project. Ideally, a DMP is created before the start of a project during the application for research funds. It should be continually reviewed and adapted during the course of the project ('living document'). A DMP can also be used to apply for funds for adequate data publication or archiving. Prices for RADAR services can be found here. If you have any questions, please contact us at info@radar-serivce.eu."
+  },
+  {
+    "term": "DATA PROVIDER",
+    "def": "Data providers are third parties authorized by the RADAR contract partner (usually employees of the institution) to archive or publish research data with RADAR and to transfer data to RADAR for this purpose. RADAR distinguishes between data providers with full rights (curators) and data providers with limited rights (subcurators)."
+  },
+  {
+    "term": "DATA PUBLICATION",
+    "def": "Unlike data archiving, data publication involves RADAR making research data and its metadata publicly accessible. Each record is assigned a unique and persistent identifier in the form of a DOI. Optionally, the curator can also define an embargo period for datasets. Published datasets can be cited and reused by third parties in accordance with the license terms. RADAR guarantees the availability of published datasets for at least 25 years."
+  },
+  {
+    "term": "DATASET",
+    "def": "A dataset consists of one or more files (e.g. organized in directories) and descriptions in the form of metadata. Datasets are created and edited by curators and subcurators in the workspace. With RADAR, datasets can either be archived or published. Each dataset is assigned an identifier (DOI or RADAR-ID). To create a new dataset, individual files as well as multiple files in compressed form, for example ZIP, TAR, GZIP or other, can be uploaded. Any directories are automatically adopted for the dataset. RADAR recommends the use of file formats suitable for long-term preservation."
+  },
+  {
+    "term": "DIGITAL LONG-TERM PRESERVATION",
+    "def": "Digital long-term preservation aims at ensuring the long-term availability of digital documents, e.g. research data. It involves two levels. On the one hand, bitstream preservation ensures that the data remains unchanged over time. Functional long-term preservation aims at maintaining the interpretability of the data and can include measures such as migration or emulation. RADAR guarantees the readability of the datasets within the retention period specified by the customer (5-15 years) for archived datasets or for at least 25 years for published datasets. To ensure that the data can be interpreted and used, RADAR recommends the use of suitable file formats. For further information on suitable file formats, please refer to this overview."
+  },
+  {
+    "term": "DIGITAL REPOSITORY",
+    "def": "A digital repository is an information infrastructure that securely stores digital objects and, if desired, makes them accessible. The objects - for example research data - are described with metadata and provided with identifiers. In this way, research data can be found, cited and (according to the license conditions) reused. RADAR was created as a digital repository for research data from the so-called 'long tail' disciplines."
+  },
+  {
+    "term": "DOI - DIGITAL OBJECT IDENTIFIER",
+    "def": "A Digital Object Identifier (DOI) is a character string consisting of a prefix and a suffix (e.g. DOI: 10.1000/123456) that uniquely identifies a digital object, such as a journal article or a dataset. The identifier permanently refers to the assigned object. DOIs make it easier to find and cite research data and link datasets to other publications. In RADAR, each published dataset is automatically assigned a DOI, which is registered with the global organization DataCite."
+  },
+  {
+    "term": "EMBARGO",
+    "def": "An embargo defines a period in which published datasets are not accessible, but the metadata records are publicly visible. The dataset is made accessible after the embargo period has expired. An embargo can be used if research data needs to be published with a time delay (e.g. to meet publisher requirements or if the data still needs to be evaluated). The curator can define the embargo period in RADAR."
+  },
+  {
+    "term": "FILE FORMATS",
+    "def": "Not all file formats are suitable for the long-term preservation of research data. Formats should meet the standards of the respective discipline, be completely open and documented where possible. Some formats that facilitate the reusability of data are well established. RADAR has compiled an overview of recommended file formats for different object types, but this list is not exhaustive."
+  },
+  {
+    "term": "FINDABILITY",
+    "def": "Curators describe datasets with metadata before they are published. This increases the visibility and findability of the research data published with RADAR. Metadata is shared with other services (e.g. DataCite, OAI Provider) in a standardized way."
+  },
+  {
+    "term": "GOOD SCIENTIFIC PRACTICE",
+    "def": "Rules for good scientific practice serve as a framework of integrity in the scientific processes. In Germany, these rules are reflected in the recommendations of the German Research Foundation (DFG) for safeguarding good scientific practice. With regard to research data, it is recommended that: 'Primary data as the basis for publications shall be securely stored for ten years in a durable form in the institution of their origin.' Data providers can comply with this recommendation by publishing or archiving data in RADAR."
+  },
+  {
+    "term": "HARVESTING",
+    "def": "The term 'harvesting' refers to the systematic collection and processing of metadata from databases, repositories and other sources. RADAR supports this process via an OAI-PMH interface that enables the harvesting of metadata published in RADAR. This increases the visibility, finability and reusability of the published research data."
+  },
+  {
+    "term": "IDENTIFIER",
+    "def": "Identifiers are character strings that uniquely identify (digital) objects. Objects can be datasets (DOI or RADAR-ID), persons (ORCID) or terms from a controlled vocabulary (Funder-ID). Some identifiers (so-called persistent identifiers) refer permanently to the assigned object and remain stable over time. Identifiers enable the reliable and permanent addressing and disambiguation of objects. They support interoperability and thus facilitate findability and citation of research data."
+  },
+  {
+    "term": "LONG TAIL",
+    "def": "RADAR was created as a repository for research data from the so-called 'long tail' disciplines. These disciplines produce many small datasets. These datasets usually differ in the method of data collection and are therefore difficult to standardize. RADAR is suitable for archiving and publishing datasets from all disciplines."
+  },
+  {
+    "term": "METADATA",
+    "def": "Metadata ('data about data') describe properties and content of objects, for example research data. Metadata of a dataset in RADAR include descriptive metadata, which enables others to find, reference and reuse the data (e.g. title, creator, subject or identifier of a dataset). They are created by curators and subcurators. Additionally, RADAR generates technical metadata (e.g. information on volume, format and checksums) that are relevant for long-term preservation. The system automatically creates metadata for long-term preservation in accordance with the PREMIS standard, in which all events from the first upload to the creation of copies during migration to newer storage media are recorded and documented. The metadata of the datasets published with RADAR are publicly accessible. In the process of DOI assignment and registration, the metadata are automatically converted into the DataCite format. At the same time, the metadata is converted into the DublinCore format so that it can be publicly offered for harvesting via an OAI provider. The documentation of the RADAR metadata schema is available here."
+  },
+  {
+    "term": "ORCID",
+    "def": "An ORCID (Open Researcher and Contributor ID) is a character string that uniquely identifies a researcher. This identifier permanently refers to the same person. This makes it easier to connect publications to their authors - even if several authors share the same name or if a person transfers to another institution. More information on ORCID is provided here. Data providers in RADAR can identify the persons involved in the creation of the dataset by specifying the respective ORCIDs in the metadata record."
+  },
+  {
+    "term": "PENDING",
+    "def": "After the upload to a workspace, a dataset is initially stored in the temporary storage and is marked as 'Pending'. In this status, curators or subcurators can edit the datasets by adding or deleting files or directories and the metadata. Datasets can be left in the temporary storage in pending status for up to 6 months. When the dataset is archived or published, it is moved from temporary to permanent storage."
+  },
+  {
+    "term": "PERSON RESPONSIBLE FOR DATA PACKAGES",
+    "def": "When a workspace is created, the e-mail address of a responsible person must be specified. This person will be contacted at the end of the retention period in order to clarify how the archived research data should be handled. As archived datasets can be retained for up to 15 years, the responsible person and the e-mail address should be chosen carefully. RADAR recommends the use of functional addresses (e.g. library@my-institution.com) instead of personal e-mail addresses."
+  },
+  {
+    "term": "QUOTA",
+    "def": "Quota refer to the adjustable maximum size of storage space. RADAR distinguishes between three different quota: one for temporary storage, another for archived datasets and a third for published datasets. They are mainly used to control the costs for the institution that signed the contract with RADAR. Quota are defined by the administrator for each contract and workspace. Data providers can only upload, archive or publish data to the RADAR platform until the respective quota has been exceeded. The administrator can increase the defined quota at any time, which can lead to additional costs."
+  },
+  {
+    "term": "RADAR-ID",
+    "def": "A RADAR-ID is a character string that uniquely identifies a dataset within the RADAR system. This identifier permanently refers to the assigned dataset. All archived datasets are assigned a RADAR-ID."
+  },
+  {
+    "term": "REGISTERED USER",
+    "def": "Different user groups are granted different access rights in RADAR. Administrators, curators and subcurators must be registered with RADAR in order to make use of their rights. Access to archived datasets also requires registration with RADAR and approval by the responsible administrator or curator. All users have access to the search function and to published datasets."
+  },
+  {
+    "term": "RESEARCH DATA",
+    "def": "Research data are digital data which are, depending on the subject context, the subject of a research process, are created in the course of such a process or are its result. vgl. Kindling, M.; Schirmbacher, P. (2013): „Die digitale Forschungswelt“ als Gegenstand der Forschung. In: Information: Wissenschaft und Praxis 64 (2/3), S. 127–136. 10.1515/iwp-2013-0017"
+  },
+  {
+    "term": "RETENTION PERIOD",
+    "def": "RADAR enables the preservation of datasets over a defined period of time, the retention period (5, 10, 15 years). The curator determines the retention period for archived datasets. Once the retention period has expired, the dataset is deleted. The retention period is unlimited for published datasets and RADAR guarantees a retention period of at least 25 years. For more information, please refer to the RADAR service description (only available in German)."
+  },
+  {
+    "term": "REVIEW OF RESEARCH DATA",
+    "def": "RADAR supports a review process prior to data publication. For this purpose, a dataset can be moved from the status 'Pending' to the status 'In Review'. In this status the dataset can not be changed. RADAR generates a unique link which the data provider can pass on to the reviewers. The reviewers can use this link to access unpublished datasets without prior authentication. Datasets with the status 'In Review' are kept in the temporary storage. Once the peer review process has been completed, the data provider can either return the status of the dataset to 'Pending' or publish the dataset. In both cases, the previously created unique link is rendered invalid. The status of a dataset can be set to 'In Review' several times in succession."
+  },
+  {
+    "term": "SUBCURATOR",
+    "def": "The subcurator is a data provider with restricted rights. Subcurators can only upload data to RADAR and add metadata. They can read and access the datasets in the workspace they are assigned to. Unlike curators, they cannot archive or publish datasets. Subcurators are assigned to a specific workspace by the administrator or curator. One or more subcurators can be assigned to a workspace."
+  },
+  {
+    "term": "TEMPORARY STORAGE",
+    "def": "In RADAR, the temporary storage is used for editing and reviewing of datasets in the workspace. After the upload, a dataset is initially stored in the temporary storage, which is indicated by the status 'In progress'. In this status, curators or subcurators can edit the dataset by adding or deleting files or directories and by adding metadata. Datasets can be left in temporary storage for up to 6 months. If datasets are archived or published, they no longer occupy any space in temporary storage. Datasets with the status 'In Review' are also stored in temporary storage. The annual basic fee includes a volume of temporary storage sufficient for most purposes. If required, the temporary storage space can be extended for a fee."
+  },
+  {
+    "term": "UNREGISTERED USER",
+    "def": "Different user groups are granted different access rights in RADAR. Unregistered users ('anonymous users') have access to the search function and to published datasets. Administrators, curators and subcurators must be registered with RADAR in order to make use of their rights. Access to archived datasets requires registration in RADAR and approval by the respective curator."
+  },
+  {
+    "term": "WORKSPACE",
+    "def": "The workspace is the central entry point for researchers who want to archive or publish research data with RADAR. A workspace is typically set up for a working group, an organisational unit or a project. It provides an overview of the existing datasets. Research data can be uploaded and described with metadata in the workspace. At least one curator is assigned to each workspace by the administrator. The curator manages the workspace and decides on the publication or archiving of datasets, defines specifications for the metadata and manages access rights to the workspace and archived datasets. Several workspaces can be set up for each RADAR contract."
+  }
+]

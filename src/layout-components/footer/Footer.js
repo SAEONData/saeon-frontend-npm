@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col, Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap'
 
-import '../Shared.scss'
+import '../../Shared.scss'
 import './Footer.scss'
 
 class Footer extends Component {
