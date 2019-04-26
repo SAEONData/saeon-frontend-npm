@@ -1,0 +1,66 @@
+@import '../../Shared.scss';
+
+.glossary-search-container {
+  height: 100vh;
+  padding: 15px;
+}
+
+.glossary-search-row-divider {
+  margin: 15px 0px;
+}
+
+.glossary-search-links-row {
+  margin-top: 15px;
+}
+
+.glossary-search-links-container {
+  margin: 0px 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.glossary-search-link {
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.glossary-search-active-filter {
+  padding-bottom: 1px;
+  text-align: center;
+  width: 28px;
+  font-weight: 500;
+  font-size: 18px;
+  background-color: $accent-color-bg;
+  color: white;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.glossary-search-content-container {
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.glossary-search-content-item {
+  margin-bottom: 25px;
+}
+
+.glossary-search-content-item-term{
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  // font-style: italic;
+}
+
+.glossary-search-content-item-def{
+  // font-style: italic;
+  font-size: 16px;
+}
+
+.glossary-search-eraser {
+  margin-top: 6px;
+  margin-right: -12px;
+  margin-left: 10px;
+  cursor: pointer;
+}

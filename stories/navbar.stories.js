@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import { Navbar } from '../src/index'
 import { notification } from 'antd';
 
-import { accentColor } from '../src/layout-components/Shared'
+import { accentColor } from '../src/Shared'
 const _ = require('lodash')
 
 let cfgLinksOnly = {
